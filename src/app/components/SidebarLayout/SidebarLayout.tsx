@@ -4,6 +4,7 @@ import styles from './layout.module.css';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import { Tooltip, tooltipClasses, TooltipProps } from '@mui/material';
+import ExplorerPanel from '@/app/components/ExplorerPanel/ExplorerPanel';
 
 const SidebarButton = styled(IconButton).attrs({ disableRipple: true })``;
 
@@ -22,10 +23,10 @@ const CustomTooltip = styled(({ className, ...props }: TooltipProps & { classNam
   }
 `;
 
-const SidebarIcon = styled.i<{ isOpened: boolean }>`
+const SidebarIcon = styled.i<{ isActive: boolean }>`
   font-size: 20px !important;
   color: #c5c5c5;
-  color: ${props => props.isOpened ? 'white' : '#c5c5c5'};
+  color: ${props => props.isActive ? 'white' : '#c5c5c5'};
   padding: 5px;
   cursor: pointer;
   
@@ -36,7 +37,7 @@ const SidebarIcon = styled.i<{ isOpened: boolean }>`
 
 
 const SidebarLayout = () => {
-  const [isExplorerOpen, setExplorerOpen] = useState<boolean>(false);
+  const [isExplorerOpen, setExplorerOpen] = useState<boolean>(true);
 
   const handleExplorerClick = useCallback(() => {
     setExplorerOpen((prev) => !prev);
@@ -47,41 +48,31 @@ const SidebarLayout = () => {
       <Box className={styles.sidebar}>
         <SidebarButton onClick={handleExplorerClick}>
           <CustomTooltip title="Explorer" placement="right" arrow>
-            <SidebarIcon className="codicon codicon-files" isOpened={isExplorerOpen} />
+            <SidebarIcon className="codicon codicon-files" isActive={isExplorerOpen} />
           </CustomTooltip>
         </SidebarButton>
         <SidebarButton>
           <CustomTooltip title="Search" placement="right" arrow>
-            <SidebarIcon className="codicon codicon-search" isOpened={false} />
+            <SidebarIcon className="codicon codicon-search" isActive={false} />
           </CustomTooltip>
         </SidebarButton>
         <SidebarButton>
           <CustomTooltip title="Source Control" placement="right" arrow>
-            <SidebarIcon className="codicon codicon-source-control" isOpened={false} />
+            <SidebarIcon className="codicon codicon-source-control" isActive={false} />
           </CustomTooltip>
         </SidebarButton>
         <SidebarButton>
           <CustomTooltip title="Run and Debug" placement="right" arrow>
-            <SidebarIcon className="codicon codicon-debug-alt" isOpened={false} />
+            <SidebarIcon className="codicon codicon-debug-alt" isActive={false} />
           </CustomTooltip>
         </SidebarButton>
         <SidebarButton>
           <CustomTooltip title="Extensions" placement="right" arrow>
-            <SidebarIcon className="codicon codicon-extensions" isOpened={false} />
+            <SidebarIcon className="codicon codicon-extensions" isActive={false} />
           </CustomTooltip>
         </SidebarButton>
       </Box>
-      {isExplorerOpen && (
-        <Box className={styles.explorer}>
-          <Box className={styles.explorerContent}>
-            <Box className={styles.explorerItem}>src</Box>
-            <Box className={styles.explorerItem}>public</Box>
-            <Box className={styles.explorerItem}>node_modules</Box>
-            <Box className={styles.explorerItem}>package.json</Box>
-            <Box className={styles.explorerItem}>tsconfig.json</Box>
-          </Box>
-        </Box>
-      )}
+      {isExplorerOpen && <ExplorerPanel />}
     </>
   );
 };

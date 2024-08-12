@@ -67,7 +67,7 @@ const ToolbarCloseButton = styled(ToolbarControlButton).attrs({ disableRipple: t
 `;
 
 const ToolbarLayout = () => (
-  <AppBar position="static" className={styles.tabBar}>
+  <AppBar position="absolute" className={styles.tabBar}>
     <CustomToolbar variant="dense">
       <LeftToolbarGroup>
         <VSCodeLogo src="/vscode-logo.png" alt="vscode-logo" />
