@@ -28,18 +28,6 @@ export const TItem = styled(TreeItem2)`
   }
 `;
 
-export const InactiveTItem = styled(TreeItem2)`
-  & .MuiTreeItem-label {
-    font-size: 12px !important;
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: normal !important;
-  }
-
-  & .MuiTreeItem-content:hover {
-    background-color: rgba(255, 255, 255, 0.12);
-  }
-`;
-
 export const ExplorerContainer = styled(Box)`
   width: 230px;
   background-color: #1e1e1e;

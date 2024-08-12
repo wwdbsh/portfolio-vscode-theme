@@ -8,6 +8,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import ToolbarLayout from '@/app/components/ToolbarLayout/ToolbarLayout';
 import SidebarLayout from '@/app/components/SidebarLayout/SidebarLayout';
+import TabbarLayout from '@/app/components/TabbarLayout/TabbarLayout';
 
 const Container = styled(Box)``;
 
@@ -18,16 +19,7 @@ const VSCodeLayout = () => {
         <Box style={{ display: 'flex', marginTop: '31px', width: '100%' }}>
           <SidebarLayout />
           <Box className={styles.main}>
-            <Tabs
-              value={0}
-              TabIndicatorProps={{ style: { top: 0, bottom: 'auto' } }}
-              indicatorColor="primary"
-              textColor="inherit"
-              className={styles.tabs}
-            >
-              <Tab label="AboutMe.tsx" className={styles.tab} sx={{ textTransform: 'none' }} />
-              <Tab label="AboutMe2.tsx" className={styles.tab} sx={{ textTransform: 'none' }} />
-            </Tabs>
+            <TabbarLayout />
 
             {/* 메인 에디터 영역 */}
             <Box className={styles.editor}>

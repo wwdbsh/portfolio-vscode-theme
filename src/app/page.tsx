@@ -1,9 +1,12 @@
 import React from 'react';
 import VSCodeLayout from './components/VSCodeLayout/VSCodeLayout';
+import { TabProvider } from './contexts/TabContext';
 
 const HomePage = () => {
   return (
-    <VSCodeLayout />
+    <TabProvider>
+      <VSCodeLayout />
+    </TabProvider>
   );
 }
 

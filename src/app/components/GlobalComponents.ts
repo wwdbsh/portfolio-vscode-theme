@@ -45,3 +45,13 @@ export const LightbulbIcon = styled.i.attrs({ className: 'codicon codicon-lightb
 export const MailIcon = styled.i.attrs({ className: 'codicon codicon-mail'})`
   color: springgreen;
 `;
+export const CloseIcon = styled.i.attrs({ className: 'codicon codicon-close'})`
+  font-size: 14px !important;
+  color: #fff;
+  background-color: transparent;
+  border-radius: 2px;
+  padding: 1px;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+`;

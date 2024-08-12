@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import styles from './panel.module.css'
+import React, { useContext, useEffect, useState } from 'react';
 import { SimpleTreeView } from '@mui/x-tree-view';
-import { ExplorerContainer, InactiveTItem, RootItem, TItem } from './PanelComponents';
+import { ExplorerContainer, RootItem, TItem } from './PanelComponents';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { AccountIcon, BriefcaseIcon, EslintIcon, FolderOpenedIcon, GitIcon, LightbulbIcon, MailIcon, NextJsIcon, SymbolNamespaceIcon, ToolsIcon, TsIcon, YarnIcon } from '@/app/components/GlobalComponents';
+import TabContext from '@/app/contexts/TabContext';
 
 const ExplorerPanel = () => {
+
+  const { tabs, setTabs, setSelectedTab } = useContext(TabContext);
+
   const [expandedItems, setExpandedItems] = useState(['1', '4', '5', '12', '18']);
 
   const handleToggle = (event: any, itemId: string) => {
@@ -21,6 +23,17 @@ const ExplorerPanel = () => {
     );
   };
 
+  const onClickItem = (fileName: string) => {
+    setTabs((prevTabs: string[]) => {
+      if (!prevTabs.includes(fileName)) {
+        setSelectedTab(prevTabs.length);
+        return [...prevTabs, fileName];
+      }
+      setSelectedTab(prevTabs.indexOf(fileName));
+      return prevTabs;
+    })
+  };
+
   return (
     <ExplorerContainer>
       <SimpleTreeView
@@ -28,10 +41,10 @@ const ExplorerPanel = () => {
        onItemClick={handleToggle}
       >
         <RootItem itemId="1" label="PORTFOLIO">
-          <InactiveTItem itemId="2" label=".next" slots={{ icon: ChevronRightIcon }}/>
-          <InactiveTItem itemId="3" label="node_modules" slots={{ icon: ChevronRightIcon }}/>
+          <TItem itemId="2" label=".next" slots={{ icon: ChevronRightIcon }} disabled />
+          <TItem itemId="3" label="node_modules" slots={{ icon: ChevronRightIcon }} disabled />
           <TItem itemId="4" label="public" >
-            <TItem itemId="12" label="SangheonLee.ts" slots={{ icon: TsIcon }} >
+            <TItem itemId="12" label="SangheonLee.ts" slots={{ icon: TsIcon }} onClick={() => onClickItem('SangheonLee.ts')} >
               <TItem itemId="13" label="About Me" slots={{ icon: AccountIcon }} />
               <TItem itemId="14" label="Work Experience" slots={{ icon: BriefcaseIcon }} />
               <TItem itemId="15" label="Skills" slots={{ icon: ToolsIcon }} />
@@ -41,7 +54,7 @@ const ExplorerPanel = () => {
           </TItem>
           <TItem itemId="5" label="src">
             <TItem itemId="18" label="projects" slots={{ icon: FolderOpenedIcon }}>
-
+              <TItem itemId="19" label="Pixie.ts" onClick={() => onClickItem('Pixie.ts')} />
             </TItem>
           </TItem>
           <TItem itemId="6" label=".eslintrc.json" slots={{ icon: EslintIcon }} />
