@@ -29,7 +29,7 @@ export const TItem = styled(TreeItem2)`
 `;
 
 export const ExplorerContainer = styled(Box)`
-  width: 230px;
+  width: 300px;
   background-color: #1e1e1e;
   color: #c5c5c5;
   border-right: 1px solid #333;

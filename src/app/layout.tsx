@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import '@vscode/codicons/dist/codicon.css';
 import "./globals.css";
+import { TabProvider } from "./contexts/TabContext";
+import VSCodeLayout from "./components/VSCodeLayout/VSCodeLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <TabProvider>
+          <VSCodeLayout>
+            {children}
+          </VSCodeLayout>
+        </TabProvider>
+      </body>
     </html>
   );
 }

@@ -1,12 +1,23 @@
+'use client';
+
+import { Box } from '@mui/material';
 import React from 'react';
-import VSCodeLayout from './components/VSCodeLayout/VSCodeLayout';
-import { TabProvider } from './contexts/TabContext';
+import AboutMe from './components/SangheonLee/AboutMe/AboutMe';
+import styled from 'styled-components';
+
+const Container = styled(Box)``;
+
+const Section = styled(Box)``;
 
 const HomePage = () => {
   return (
-    <TabProvider>
-      <VSCodeLayout />
-    </TabProvider>
+    <Container>
+
+      <Section id='about-me'>
+        <AboutMe />
+      </Section>
+
+    </Container>
   );
 }
 

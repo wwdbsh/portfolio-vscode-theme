@@ -1,14 +1,17 @@
 import { Box } from '@mui/material';
 import React, { useContext, useEffect, useState } from 'react';
 import TabContext from '@/app/contexts/TabContext';
-import { CloseIcon } from '../GlobalComponents';
+import { AccountIcon, CloseIcon, TsIcon } from '../GlobalComponents';
 import { CustomTab, CustomTabs } from './TabbarComponents';
+import { useRouter } from 'next/navigation';
 
 const TabbarLayout = () => {
   
+  const router = useRouter();
+
   const { tabs, setTabs, selectedTab, setSelectedTab } = useContext(TabContext);
 
-  const onClickTab = (event: any, index: number) => {
+  const onClickTab = (event: any, index: number, fileName: string) => {
     if (event.target.tagName === 'I') {
       if (tabs.length === 1) {
         return;
@@ -26,8 +29,20 @@ const TabbarLayout = () => {
       return;
     }
 
+    if (fileName === 'SangheonLee.ts') {
+      router.push('/#about-me');
+    }
+
     setSelectedTab(index);
   };
+
+  const getIcon = (fileName: string) => {
+    if (fileName === 'SangheonLee.ts') {
+      return <TsIcon style={{ marginRight: 6, transform: 'translateY(-2px)' }} />;
+    } else if (fileName === 'Pixie.ts') {
+      return null;
+    }
+  }
 
   return (
     <CustomTabs
@@ -41,6 +56,7 @@ const TabbarLayout = () => {
          key={index}
          label={
           <Box style={{ display: 'flex', alignItems: 'center' }}>
+            {getIcon(tab)}
             {tab}
             <CloseIcon style={{ marginLeft: 4 }} />
           </Box>
@@ -48,7 +64,7 @@ const TabbarLayout = () => {
          sx={{ textTransform: 'none' }}
          disableRipple={true}
          isSelected={selectedTab === index}
-         onClick={(event) => onClickTab(event, index)}
+         onClick={(event) => onClickTab(event, index ,tab)}
          />
       ))}
     </CustomTabs>
