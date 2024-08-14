@@ -23,8 +23,16 @@ import {
   CollegeImage,
   CollegeInfoContainer,
   CollegeText,
-  SubContainer
+  SubContainer,
+  MoreInfoContainer,
+  IconClickButton,
+  LinkedInIcon,
+  LinkButton,
+  GitHubIcon,
+  ContactMeButton,
+  ContactMeText
 } from './AboutMeComponents';
+import { githubUrl, linkedinUrl } from '@/utils/constatns';
 
 const AboutMe = () => {
   return (
@@ -65,6 +73,17 @@ const AboutMe = () => {
                 <LanguageText>Korean - Native</LanguageText>
                 <LanguageText>English - Advanced</LanguageText>
               </LanguageContainer>
+              <MoreInfoContainer>
+                <LinkButton href={linkedinUrl} target='_blank' >
+                  <LinkedInIcon />
+                </LinkButton>
+                <LinkButton href={githubUrl} target="_blank">
+                  <GitHubIcon />
+                </LinkButton>
+                <ContactMeButton>
+                  <ContactMeText>Contact Me</ContactMeText>
+                </ContactMeButton>
+              </MoreInfoContainer>
             </LeftContainer>
             <RightContainer>
               <EducationContainer>

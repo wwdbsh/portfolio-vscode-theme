@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Button, IconButton, Link, Typography } from '@mui/material';
 import styled from 'styled-components';
 
 export const Container = styled(Box)`
@@ -71,10 +71,11 @@ export const ProfileImage = styled.img`
   width: 200px;
   height: 250px;
   border-radius: 50%;
+  z-index: 1;
 `;
 
 export const LeftContainer = styled(Box)`
-  width: 23%;
+  width: 25%;
 `;
 
 export const LanguageTitle = styled(Typography).attrs({ variant: 'body1' })`
@@ -84,29 +85,84 @@ export const LanguageTitle = styled(Typography).attrs({ variant: 'body1' })`
 
 export const LanguageContainer = styled(Box)`
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   padding: 10px 0;
 `;
 
 export const LanguageText = styled(Typography).attrs({ variant: 'body1' })``;
 
-export const RightContainer = styled(Box)``;
+export const MoreInfoContainer = styled(Box)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+`;
+
+export const LinkButton = styled(Link)`
+  text-decoration: none;
+`;
+
+export const IconClickButton = styled(IconButton)``;
+
+export const LinkedInIcon = styled.i.attrs({ className: 'devicon-linkedin-plain' })`
+  font-size: 30px !important;
+  color: white;
+  margin-right: 15px;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+export const GitHubIcon = styled.i.attrs({ className: 'devicon-github-original' })`
+  font-size: 30px !important;
+  color: white;
+  margin-right: 15px;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+`;
+
+export const ContactMeButton = styled(Button).attrs({ disableRipple: true })`
+  background-color: white;
+  color: #1f1f1f;
+  border-radius: 20px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:hover {
+    background-color: coral;
+    color: white;
+  }
+`;
+
+export const ContactMeText = styled(Typography)`
+  font-size: 12px;
+`;
+
+export const RightContainer = styled(Box)`
+  width: 48%;
+`;
 
 export const EducationContainer = styled(Box)`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  padding: 30px 25px;
+  padding: 45px 10px;
 `;
 
 export const CollegeImage = styled.img`
   width: 100px;
   height: 100px;
   margin-right: 20px;
+  z-index: 1;
 `;
 
 export const CollegeInfoContainer = styled(Box)``;

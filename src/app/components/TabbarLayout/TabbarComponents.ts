@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const CustomTabs = styled(Tabs)`
   background-color: #181818;
   min-height: 30px;
+  z-index: 1;
 `;
 
 export const CustomTab = styled(Tab)<{ isSelected: boolean }>`

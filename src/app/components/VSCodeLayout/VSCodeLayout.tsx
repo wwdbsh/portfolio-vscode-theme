@@ -18,7 +18,9 @@ const VSCodeLayout = ({children}: {children: React.ReactNode}) => {
           <SidebarLayout />
           <Box className={styles.main}>
             <TabbarLayout />
-            <Box className={styles.editor}>{children}</Box>
+            <Box className={styles.editor}>
+              {children}
+            </Box>
           </Box>
         </Box>
       </Container>

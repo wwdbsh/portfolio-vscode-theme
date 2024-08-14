@@ -33,4 +33,5 @@ export const ExplorerContainer = styled(Box)`
   background-color: #1e1e1e;
   color: #c5c5c5;
   border-right: 1px solid #333;
+  z-index: 1;
 `;
