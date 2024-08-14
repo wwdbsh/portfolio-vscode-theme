@@ -42,10 +42,10 @@ const AboutMe = () => {
 
         <IntroductionContainer>
           <Title>
-            I'm a <Highlight>Software Engineer</Highlight>
+            I&apos;m a <Highlight>Software Engineer</Highlight>
           </Title>
           <Title>
-            specialized on <Highlight>Web & Mobile Applications</Highlight>
+            specialized on <Highlight>Web &amp; Mobile Applications</Highlight>
           </Title>
         </IntroductionContainer>
 
@@ -55,7 +55,7 @@ const AboutMe = () => {
               <NameText>Sangheon Lee</NameText>
               <JobTitle>Full Stack Software Engineer</JobTitle>
               <IntroText>
-                I'm an experienced software engineer who constantly seeks out innovative solutions to everyday problems.
+                I&apos;m an experienced software engineer who constantly seeks out innovative solutions to everyday problems.
               </IntroText>
               <IntroText>
                 After 5 years in this industry, I have worked with multiple front-end, back-end, mobile, and cloud technologies.
