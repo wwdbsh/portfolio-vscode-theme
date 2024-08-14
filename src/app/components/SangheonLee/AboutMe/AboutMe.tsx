@@ -23,9 +23,7 @@ import {
   CollegeImage,
   CollegeInfoContainer,
   CollegeText,
-  SubContainer,
   MoreInfoContainer,
-  IconClickButton,
   LinkedInIcon,
   LinkButton,
   GitHubIcon,
@@ -37,7 +35,6 @@ import { githubUrl, linkedinUrl } from '@/utils/constatns';
 const AboutMe = () => {
   return (
     <Container>
-      <SubContainer>
         <Header>
           <AccountIcon />
           <HeaderTitle>About Me</HeaderTitle>
@@ -45,7 +42,7 @@ const AboutMe = () => {
 
         <IntroductionContainer>
           <Title>
-            I'm a <Highlight>software engineer</Highlight>
+            I'm a <Highlight>Software Engineer</Highlight>
           </Title>
           <Title>
             specialized on <Highlight>Web & Mobile Applications</Highlight>
@@ -53,7 +50,7 @@ const AboutMe = () => {
         </IntroductionContainer>
 
         <ProfileContainer>
-          <Row style={{ gap: '15px' }}>
+          <Row>
             <InfoContainer>
               <NameText>Sangheon Lee</NameText>
               <JobTitle>Full Stack Software Engineer</JobTitle>
@@ -97,7 +94,6 @@ const AboutMe = () => {
             </RightContainer>
           </Row>
         </ProfileContainer>
-      </SubContainer>
     </Container>
   );
 };

@@ -2,20 +2,17 @@ import { Box, Button, IconButton, Link, Typography } from '@mui/material';
 import styled from 'styled-components';
 
 export const Container = styled(Box)`
-  display: flex;
-  justify-content: center;
   background-color: #1f1f1f;
   color: white;
   padding: 50px;
   border-radius: 10px;
+  margin-bottom: 70px;
+  max-width: 750px;
 `;
-
-export const SubContainer = styled(Box)``;
 
 export const Header = styled(Box)`
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
   gap: 20px;
   margin-bottom: 50px;
 `;
@@ -49,7 +46,7 @@ export const Row = styled(Box)`
 `;
 
 export const InfoContainer = styled(Box)`
-  width: 50%;
+  width: 70%;
 `;
 
 export const NameText = styled(Typography).attrs({ variant: 'h6' })`
@@ -75,7 +72,7 @@ export const ProfileImage = styled.img`
 `;
 
 export const LeftContainer = styled(Box)`
-  width: 25%;
+  width: 40%;
 `;
 
 export const LanguageTitle = styled(Typography).attrs({ variant: 'body1' })`
@@ -145,7 +142,7 @@ export const ContactMeText = styled(Typography)`
 `;
 
 export const RightContainer = styled(Box)`
-  width: 48%;
+  width: 60%;
 `;
 
 export const EducationContainer = styled(Box)`
@@ -167,4 +164,4 @@ export const CollegeImage = styled.img`
 
 export const CollegeInfoContainer = styled(Box)``;
 
-export const CollegeText = styled(Typography).attrs({ variant: 'body1' })``;
+export const CollegeText = styled(Typography).attrs({ variant: 'body2' })``;
