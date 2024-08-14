@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import styles from './layout.module.css';
+import styles from '@/app/components/ToolbarLayout/layout.module.css';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import MinimizeIcon from '@mui/icons-material/Minimize';

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import '@vscode/codicons/dist/codicon.css';
-import "./globals.css";
-import { TabProvider } from "./contexts/TabContext";
-import VSCodeLayout from "./components/VSCodeLayout/VSCodeLayout";
+import "@/app/globals.css";
+import { TabProvider } from "@/app/contexts/TabContext";
+import VSCodeLayout from "@/app/components/VSCodeLayout/VSCodeLayout";
 
 const inter = Inter({ subsets: ["latin"] });
 

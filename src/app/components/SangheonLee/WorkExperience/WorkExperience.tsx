@@ -7,8 +7,7 @@ import {
   Highlight,
   IntroductionContainer,
   Title,
-  
-} from './WorkExperienceComponents';
+} from '@/app/components/SangheonLee/WorkExperience/WorkExperienceComponents';
 
 const WorkExperience = () => {
   return (

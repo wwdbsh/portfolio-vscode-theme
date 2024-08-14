@@ -29,7 +29,7 @@ import {
   GitHubIcon,
   ContactMeButton,
   ContactMeText
-} from './AboutMeComponents';
+} from '@/app/components/SangheonLee/AboutMe/AboutMeComponents';
 import { githubUrl, linkedinUrl } from '@/utils/constatns';
 
 const AboutMe = () => {

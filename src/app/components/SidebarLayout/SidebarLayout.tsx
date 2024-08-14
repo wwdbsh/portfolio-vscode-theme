@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
-import styles from './layout.module.css';
+import styles from '@/app/components/VSCodeLayout/layout.module.css';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import { Tooltip, tooltipClasses, TooltipProps } from '@mui/material';

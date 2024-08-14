@@ -1,8 +1,8 @@
 import { Box } from '@mui/material';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import TabContext from '@/app/contexts/TabContext';
-import { AccountIcon, CloseIcon, TsIcon } from '../GlobalComponents';
-import { CustomTab, CustomTabs } from './TabbarComponents';
+import { CloseIcon, TsIcon } from '@/app/components/GlobalComponents';
+import { CustomTab, CustomTabs } from '@/app/components/TabbarLayout/TabbarComponents';
 import { useRouter } from 'next/navigation';
 
 const TabbarLayout = () => {

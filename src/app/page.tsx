@@ -1,11 +1,11 @@
 'use client';
 
-import { Box } from '@mui/material';
 import React from 'react';
-import AboutMe from './components/SangheonLee/AboutMe/AboutMe';
 import styled from 'styled-components';
-import CustomParticles from './components/CustomParticles/CustomParticles';
-import WorkExperience from './components/SangheonLee/WorkExperience/WorkExperience';
+import { Box } from '@mui/material';
+import AboutMe from '@/app/components/SangheonLee/AboutMe/AboutMe';
+import CustomParticles from '@/app/components/CustomParticles/CustomParticles';
+import WorkExperience from '@/app/components/SangheonLee/WorkExperience/WorkExperience';
 
 const Container = styled(Box)`
   max-width: fit-content;
