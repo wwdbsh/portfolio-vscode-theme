@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import { Box } from "@mui/material";
 import { TreeItem2 } from "@mui/x-tree-view";
-import styled from "styled-components";
 
 export const RootItem = styled(TreeItem2)`
   & .MuiTreeItem-content {

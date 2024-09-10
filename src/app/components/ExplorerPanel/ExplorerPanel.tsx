@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { SimpleTreeView } from '@mui/x-tree-view';
+import { AccountIcon, BriefcaseIcon, EslintIcon, FolderOpenedIcon, GitIcon, LightbulbIcon, MailIcon, NextJsIcon, SymbolNamespaceIcon, ToolsIcon, TsIcon, YarnIcon } from '@/app/components/GlobalComponents';
 import { ExplorerContainer, RootItem, TItem } from '@/app/components/ExplorerPanel/PanelComponents';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import { AccountIcon, BriefcaseIcon, EslintIcon, FolderOpenedIcon, GitIcon, LightbulbIcon, MailIcon, NextJsIcon, SymbolNamespaceIcon, ToolsIcon, TsIcon, YarnIcon } from '@/app/components/GlobalComponents';
 import TabContext from '@/app/contexts/TabContext';
 
 const ExplorerPanel = () => {

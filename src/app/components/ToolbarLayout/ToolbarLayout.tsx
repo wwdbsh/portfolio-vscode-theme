@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import styles from '@/app/components/ToolbarLayout/layout.module.css';
 import AppBar from '@mui/material/AppBar';
 import Typography from '@mui/material/Typography';
 import MinimizeIcon from '@mui/icons-material/Minimize';
@@ -67,7 +66,7 @@ const ToolbarCloseButton = styled(ToolbarControlButton).attrs({ disableRipple: t
 `;
 
 const ToolbarLayout = () => (
-  <AppBar position="absolute" className={styles.tabBar}>
+  <AppBar position="absolute" className="tabBar">
     <CustomToolbar variant="dense">
       <LeftToolbarGroup>
         <VSCodeLogo src="/vscode-logo.png" alt="vscode-logo" />

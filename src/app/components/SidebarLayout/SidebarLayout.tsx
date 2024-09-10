@@ -1,6 +1,5 @@
 import React, { useCallback, useState } from 'react';
 import styled from 'styled-components';
-import styles from '@/app/components/VSCodeLayout/layout.module.css';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import { Tooltip, tooltipClasses, TooltipProps } from '@mui/material';
@@ -45,7 +44,7 @@ const SidebarLayout = () => {
 
   return (
     <>
-      <Box className={styles.sidebar}>
+      <Box className="sidebar">
         <SidebarButton onClick={handleExplorerClick}>
           <CustomTooltip title="Explorer" placement="right" arrow>
             <SidebarIcon className="codicon codicon-files" isActive={isExplorerOpen} />

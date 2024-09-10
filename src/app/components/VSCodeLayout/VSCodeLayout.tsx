@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import styled from 'styled-components';
 import styles from '@/app/components/VSCodeLayout/layout.module.css';
+import styled from 'styled-components';
 import Box from '@mui/material/Box';
 import ToolbarLayout from '@/app/components/ToolbarLayout/ToolbarLayout';
 import SidebarLayout from '@/app/components/SidebarLayout/SidebarLayout';

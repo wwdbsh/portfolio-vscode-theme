@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material';
 import styled from 'styled-components';
+import { Box, Typography } from '@mui/material';
 
 export const Container = styled(Box)`
   background-color: #1f1f1f;

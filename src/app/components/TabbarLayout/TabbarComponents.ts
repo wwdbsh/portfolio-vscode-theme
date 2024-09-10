@@ -1,5 +1,5 @@
-import { Tab, Tabs } from "@mui/material";
 import styled from "styled-components";
+import { Tab, Tabs } from "@mui/material";
 
 export const CustomTabs = styled(Tabs)`
   background-color: #181818;

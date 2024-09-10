@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import '@vscode/codicons/dist/codicon.css';
-import "@/app/globals.css";
+import { Inter } from "next/font/google";
 import { TabProvider } from "@/app/contexts/TabContext";
 import VSCodeLayout from "@/app/components/VSCodeLayout/VSCodeLayout";
+import StyledComponentsRegistry from "@/lib/registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,12 +19,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="/styles.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+      </head>
       <body className={inter.className}>
-        <TabProvider>
-          <VSCodeLayout>
-            {children}
-          </VSCodeLayout>
-        </TabProvider>
+        <StyledComponentsRegistry>
+          <TabProvider>
+            <VSCodeLayout>
+              {children}
+            </VSCodeLayout>
+          </TabProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
